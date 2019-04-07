@@ -51,7 +51,7 @@ namespace PortfolioFunction
             var responseData = ResponseData.FromJson(obj["data"][transaction.Currency].ToString(Formatting.None));
 
             req.HttpContext.Response.Headers.Add("API-URL", coinMarketCap.BaseUrl);
-            req.HttpContext.Response.Headers.Add("API-TIMESTAMP", header.Timestamp);
+            req.HttpContext.Response.Headers.Add("API-TIMESTAMP", header.Timestamp.ToString());
             return new OkObjectResult(obj["data"][transaction.Currency]);
         }
 
