@@ -1,6 +1,6 @@
 ﻿namespace PortfolioFunction.Models
 {
-    public class CoinMarketCap
+    public class CoinMarketCapConfiguration
     {
         public string BaseUrl { get; set; }
         public string ApiKey { get; set; }
