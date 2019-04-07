@@ -12,13 +12,16 @@ namespace PortfolioFunction.Models
         public string Currency { get; set; }
 
         [JsonProperty("amount")]
-        public long Amount { get; set; }
+        public double Amount { get; set; }
 
         [JsonProperty("timestamp")]
         public DateTime Timestamp { get; set; }
 
         [JsonProperty("transactiontype")]
         public string Transactiontype { get; set; }
+
+        [JsonProperty("userId")]
+        public Guid UserId { get; set; }
     }
 
     public partial class Transaction

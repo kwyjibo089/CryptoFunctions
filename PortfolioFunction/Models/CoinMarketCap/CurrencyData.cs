@@ -6,7 +6,7 @@ using System.Globalization;
 namespace PortfolioFunction.Models.CoinMarketCap
 {
 
-    public partial class ResponseData
+    public partial class CurrencyData
     {
         [JsonProperty("id")]
         public long Id { get; set; }
@@ -81,9 +81,9 @@ namespace PortfolioFunction.Models.CoinMarketCap
         public DateTimeOffset LastUpdated { get; set; }
     }
 
-    public partial class ResponseData
+    public partial class CurrencyData
     {
-        public static ResponseData FromJson(string json) => JsonConvert.DeserializeObject<ResponseData>(json, Models.Converter.Settings);
+        public static CurrencyData FromJson(string json) => JsonConvert.DeserializeObject<CurrencyData>(json, Models.Converter.Settings);
     }
 
     //public class Serialize

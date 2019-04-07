@@ -1,7 +1,5 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using System;
-using System.Globalization;
 
 namespace PortfolioFunction.Models.CoinMarketCap
 {
@@ -9,7 +7,7 @@ namespace PortfolioFunction.Models.CoinMarketCap
     public partial class ResponseHeader
     {
         [JsonProperty("timestamp")]
-        public DateTimeOffset Timestamp { get; set; }
+        public DateTime Timestamp { get; set; }
 
         [JsonProperty("error_code")]
         public long ErrorCode { get; set; }
