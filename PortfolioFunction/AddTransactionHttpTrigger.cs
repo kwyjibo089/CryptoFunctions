@@ -23,7 +23,7 @@ namespace PortfolioFunction
             var transaction = Transaction.FromJson(requestBody);
 
             if (string.IsNullOrWhiteSpace(transaction.Currency))
-                new BadRequestObjectResult("Please pass a currency in the request body");
+                return new BadRequestObjectResult("Please pass a currency in the request body");
 
             return new OkResult();
         }
