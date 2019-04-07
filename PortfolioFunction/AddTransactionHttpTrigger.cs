@@ -11,9 +11,9 @@ using PortfolioFunction.Models;
 
 namespace PortfolioFunction
 {
-    public static class AddHttpTrigger
+    public static class AddTransactionHttpTrigger
     {
-        [FunctionName("AddHttpTrigger")]
+        [FunctionName("AddTransactionHttpTrigger")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
